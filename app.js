@@ -1,20 +1,14 @@
 const express = require('express');
+const path = require('path');
+
+const PizzasRouter = require('./routes/PizzasRouter');
 
 const app = express();
 
-const porta = 3000;
+app.set('view engine','ejs');
 
-const Pizzarouter = require('./routes/Pizzarouter');
-
-app.get('/', (req, res) => {
-    res.send('Olá, visitante!')
-});
-
-const path = require ('path')
-app.set('view engrine', 'ejs')
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/', PizzasRouter);
 
-app.listen(porta, () => {
-    console.log(`Servidor Rodando na porta ${porta}`)
-});
+app.listen(3000);
