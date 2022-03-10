@@ -14,7 +14,7 @@
 		<button type="submit">Buscar</button>
 	</form>
 
-	<main>
+	<main><%for(p of PizzasJson){ %>
 		<article>
 			<img src="/img/quatroqueijos.jpg" alt="Quatro Queijos">
 			<a href="pizza.html">Ver Mais</a>
@@ -22,7 +22,9 @@
 			<div>Quatro Queijos</div>
 			<span>R$ 33,90</span>
 		</article>
-		<article>
+	
+	<%}%>
+		<!--<article>
 			<img src="./assets/img/pepperoni.jpg" alt="Pepperoni">
 			<a href="pizza.html">Ver Mais</a>
 			<button>+ Add</button>
