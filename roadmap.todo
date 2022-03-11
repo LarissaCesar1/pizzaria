@@ -178,17 +178,17 @@ Fase 9 - Criando uma página para mostrar detalhes de uma pizza:
             O que se deve ver são as informações da pizza Fracatu, ainda sem estilização.
 
 Fase 10 - Acrescentando estilo à página de pizza:
-    ☐ Na pasta public/css crie um arquivo pizza.css
-    ☐ Copie para o arquivo pizza.css o conteúdo do link abaixo:
+    ✔ Na pasta public/css crie um arquivo pizza.css @done(22-03-10 21:15)
+    ✔ Copie para o arquivo pizza.css o conteúdo do link abaixo: @done(22-03-10 21:16)
     https://github.com/sergiomoura/pizzaria-fantastica-tema/blob/master/assets/css/pizza.css
-    ☐ Adeque o os links de estilos para que eles carreguem o estilo da pasta public
+    ✔ Adeque o os links de estilos para que eles carreguem o estilo da pasta public @done(22-03-10 21:34)
     
     Verificações:
         Com o servidor rodando, visite o endereço http://localhost:3000/pizzas/3
         O que se deve ver é uma página com as informações de uma pizza, agora, estilizada.
 
 Fase 11 - Criando link da página inicial para página de detalhes de uma pizza:
-    ☐ Na view da página inicial, ou seja, no arquivo pizzas.ejs altere o link:
+    ✔ Na view da página inicial, ou seja, no arquivo pizzas.ejs altere o link: @done(22-03-10 21:46)
     Onde se vê:
         <a href="pizza.html">Ver Mais</a>
     Deve se ver:
@@ -200,25 +200,25 @@ Fase 11 - Criando link da página inicial para página de detalhes de uma pizza:
         Você deve ser direcionado para a página que exibe as informações
         da pizza que você clicou.
 Fase 12 - Exibindo pizzas buscadas:
-    ☐ Adequando o form da view para busca
+    ✔ Adequando o form da view para busca @done(22-03-10 21:52)
         No arquivo pizzas.ejs altere o form para que ele tenha método get e
         action apontando para a rota /pizzas/busca
-    ☐ No PizzasRouter.js, crie uma rota get para /pizzas/busca.
+    ✔ No PizzasRouter.js, crie uma rota get para /pizzas/busca. @done(22-03-10 21:57)
         Essa rota deve direcionar a requisição para PizzasController.buscar
         Ela deve ser definida ANDTES da rota '/pizzas/:id'. Por que?
-    ☐ No objeto do PizzasController.js crie uma função buscar.
+    ✔ No objeto do PizzasController.js crie uma função buscar. @done(22-03-10 21:57)
         Essa função deve:
-            ☐ Capturar o que o usuário digitou no campo de busca e guardar na variável trechoBuscado
+            ✔ ☐ Capturar o que o usuário digitou no campo de busca e guardar na variável trechoBuscado @done(22-03-10 22:10)
                Dica: Dê um console.log(req.query) e veja o conteúdo desse objeto.
-            ☐ Se o trechoBuscado for vazio, redirecione o usuário para a rota '/'
+            ✔ Se o trechoBuscado for vazio, redirecione o usuário para a rota '/' @done(22-03-10 22:45)
                 Dica: res.redirect(___)
-            ☐ Se trechoBuscado não for vazio:
-                - Filtre do array de pizzas todas as pizzas que tem no nome o trechoBuscado
+            ✔ Se trechoBuscado não for vazio: @done(22-03-10 22:53)
+                ✔ Filtre do array de pizzas todas as pizzas que tem no nome o trechoBuscado @done(22-03-10 22:54)
                     Atenção: A busca não deve ser sensível ao caso, ou seja, 
                     buscando por 'm' deve encontrar 'Marguerita', mesmo tendo-se
                     buscado pela letra minúscula
-                - Armazene o resultado dessa filtragem numa variável resultado
-                - Renderize a view pizzas.ejs passando para ela um objeto literal contendo:
+                ✔ Armazene o resultado dessa filtragem numa variável resultado @done(22-03-10 22:56)
+                ✔ Renderize a view pizzas.ejs passando para ela um objeto literal contendo: @done(22-03-10 22:56)
                     1. Um campo de nome pizzas e de valor igual a variável resultado.
                     2. Um campo de nome busca com o valor igual a variável trechoBuscado.
                 Dica: res.render('pizzas.ejs',{campo1: valor1, campo2: valor2})
