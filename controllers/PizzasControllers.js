@@ -1,10 +1,9 @@
 const pizzas = require('../database/Pizzas.json')
 
-
 const PizzasController = {
     
     listar: (req, res) => {
-        res.render('pizzas.ejs', {pizzas}, busca(""))
+        res.render('pizzas.ejs', {pizzas, busca:''});
     },
 
     mostrar: (req, res) =>{
